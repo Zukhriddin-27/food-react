@@ -29,21 +29,23 @@ const MenuItem = ({
     return quantity
   }
   return (
-    <div className='item'>
-      <img src={img} alt='Item image' />
-      <div className='item-head_desc'>
-        <p className='head_desc-name'>{name}</p>
-        <p className='head_desc-info'>
-          <small>{info}</small>
-        </p>
-      </div>
-      <div className='item-foot_desc'>
-        <span className='foot_desc-price'> $ {price} </span>
-        <ButtonAddRemoveItem
-          quantity={handleItemQuantity()}
-          handleRemoveItem={() => cartRemoveItem(item)}
-          handleAddItem={() => cartAddItem(item)}
-        />
+    <div className='container'>
+      <div className='item'>
+        <img src={img} alt='Item image' />
+        <div className='item-head_desc'>
+          <p className='head_desc-name'>{name}</p>
+          <p className='head_desc-info'>
+            <small>{info}</small>
+          </p>
+        </div>
+        <div className='item-foot_desc'>
+          <span className='foot_desc-price'> $ {price} </span>
+          <ButtonAddRemoveItem
+            quantity={handleItemQuantity()}
+            handleRemoveItem={() => cartRemoveItem(item)}
+            handleAddItem={() => cartAddItem(item)}
+          />
+        </div>
       </div>
     </div>
   )
